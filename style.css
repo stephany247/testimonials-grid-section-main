@@ -199,21 +199,28 @@ img {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 60rem) {
   main {
     gap: 1.5rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     display: grid;
     justify-content: center;
+    align-self: center;
     grid-template-areas:
       "purple purple grey white-two"
       "white-one black black white-two";
-    margin: 6rem auto;
-    max-width: 70rem;
+    margin: 6rem 2rem;
+    max-width: 67rem;
   }
 
   article {
-    margin: auto;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 67rem) {
+  main {
+    margin: 6rem auto;
   }
 }
