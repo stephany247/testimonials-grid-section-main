@@ -1,0 +1,219 @@
+/* 
+ 1. Use a more-intuitive box-sizing model.
+  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+        2. Remove default margin
+      */
+* {
+  margin: 0;
+
+  /* ### Primary */
+
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  /* --### Neutral; */
+
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+/*
+        Typographic tweaks!
+        3. Add accessible line-height
+        4. Improve text rendering
+      */
+body {
+  line-height: 1.5;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--Light-grayish-blue);
+  font-size: 0.8rem;
+  font-weight: 500;
+  height: 100%;
+}
+
+/*
+        5. Improve media defaults
+      */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+        6. Remove built-in form typography styles
+      */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+        7. Avoid text overflows
+      */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+        8. Create a root stacking context
+      */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+main {
+  margin: 4rem 1.5rem;
+}
+article {
+  margin: 1.5rem 0;
+  padding: 1.7rem 2rem 2rem;
+  border-radius: 10px;
+}
+
+header p {
+  max-width: 33ch;
+  margin: 0 auto;
+}
+
+h2 {
+  font-weight: 500;
+  color: var(--Light-grayish-blue);
+  margin: 0.7rem 0;
+}
+
+p {
+  color: var(--Light-gray);
+  opacity: 70%;
+}
+
+.white h2,
+.white .name {
+  font-weight: 600;
+  color: var(--Very-dark-blackish-blue);
+  opacity: 70%;
+}
+.white p {
+  color: var(--Very-dark-grayish-blue);
+  opacity: 70%;
+  font-weight: 500;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  opacity: 50%;
+  font-size: 11px;
+}
+
+.name {
+  color: var(--White);
+}
+
+img {
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 2rem;
+}
+
+.black img {
+  border: 2px solid var(--Moderate-violet);
+}
+
+.second-heading {
+  margin-bottom: 1rem;
+}
+
+.purple {
+  background-color: var(--Moderate-violet);
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-position: right 24px top;
+  background-repeat: no-repeat;
+  grid-area: purple;
+}
+
+.grey {
+  background-color: var(--Very-dark-grayish-blue);
+  grid-area: grey;
+}
+
+.white {
+  background-color: var(--White);
+}
+
+.white-one {
+  grid-area: white-one;
+}
+
+.white-two {
+  grid-area: white-two;
+}
+
+.black {
+  background-color: var(--Very-dark-blackish-blue);
+  grid-area: black;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Responsive Design */
+@media (min-width: 35rem) {
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  main {
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+      "purple purple grey white-two"
+      "white-one black black white-two";
+    margin: 6rem auto;
+    max-width: 70rem;
+  }
+
+  article {
+    margin: auto;
+  }
+}
