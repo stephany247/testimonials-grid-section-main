@@ -90,6 +90,8 @@ article {
   margin: 1.5rem 0;
   padding: 1.7rem 2rem 2rem;
   border-radius: 10px;
+  /* box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.2474); */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 header p {
@@ -105,18 +107,18 @@ h2 {
 
 p {
   color: var(--Light-gray);
-  opacity: 70%;
+  opacity: 0.7;
 }
 
 .white h2,
 .white .name {
   font-weight: 600;
   color: var(--Very-dark-blackish-blue);
-  opacity: 70%;
+  opacity: 0.7;
 }
 .white p {
   color: var(--Very-dark-grayish-blue);
-  opacity: 70%;
+  opacity: 0.7;
   font-weight: 500;
 }
 
@@ -132,7 +134,7 @@ p {
 }
 
 .title {
-  opacity: 50%;
+  opacity: 0.5;
   font-size: 11px;
 }
 
